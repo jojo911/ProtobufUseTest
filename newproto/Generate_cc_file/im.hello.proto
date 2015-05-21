@@ -1,0 +1,19 @@
+package im; 
+
+enum status
+{
+	suc = 101;
+	fail = 102;	
+}
+message hello 
+{ 
+	required int32     id = 1;  // ID 
+	required string    str = 2;  // str 
+	optional status     value = 3;  //optional field 
+}
+
+message all 
+{ 
+	required int32     id = 1;  // ID 
+	required hello t=2;
+}
